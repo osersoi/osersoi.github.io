@@ -17,4 +17,4 @@ L'hypnothérapeute utilise des techniques de communication indirecte pour vous g
 
 Cet état naturel — que vous expérimentez déjà lorsque vous êtes absorbé(e) dans un livre ou une rêverie — permet d'accéder à vos ressources inconscientes.
 
-![Isabelle Krebl](/images/portrait.webp)
+![{{ site.therapist }}](/images/portrait.webp)

@@ -1,0 +1,27 @@
+{
+    "section_label": "Approche",
+    "title": "Une méthode personnalisée qui s'adapte à vous",
+    "intro": "L'hypnose Ericksonienne enrichie de PNL et d'autres outils pour une transformation profonde et durable.",
+    "items": [
+        {
+            "title": "Hypnose Ericksonienne",
+            "description": "Approche douce et respectueuse qui active vos ressources inconscientes. Loin du spectacle, cette pratique humaniste favorise un état de conscience modifié propice au changement souhaité.",
+            "details": [
+                "Communication indirecte et permissive",
+                "Respect de votre rythme unique",
+                "Activation de vos propres solutions"
+            ]
+        },
+        {
+            "title": "PNL & Outils complémentaires",
+            "description": "Techniques concrètes pour reprogrammer les schémas limitants et ancrer les changements souhaités dans votre quotidien.",
+            "details": [
+                "Outils de changement rapide",
+                "EFT & EMDR (stimulations bilatérales) selon besoins",
+                "Techniques utilisables entre les séances"
+            ]
+        }
+    ],
+    "result_title": "Le résultat",
+    "result_content": "Une transformation <strong>profonde ET rapide</strong> généralement en <strong>3 à 6 séances</strong>, avec des outils concrets pour ancrer le changement dans votre vie quotidienne."
+}

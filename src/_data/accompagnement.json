@@ -1,0 +1,28 @@
+{
+    "genres": [
+        {
+            "id": "adultes",
+            "section_label": "Adultes",
+            "section_title": "Accompagnement bienveillant vers le mieux-être",
+            "section_intro": "J'accompagne les adultes dans leur quête de mieux-être, quelle que soit leur situation.",
+            "cards": [
+                { "icon": "🌊", "title": "Anxiété & Stress", "description": "Retrouvez votre sérénité et apprenez à gérer vos émotions avec douceur. Transformez l'anxiété en confiance." },
+                { "icon": "✨", "title": "Confiance en soi", "description": "Reconnectez-vous à vos forces et avancez avec assurance dans vos projets personnels et professionnels." },
+                { "icon": "🌱", "title": "Habitudes & Comportements", "description": "Transformez les schémas limitants en nouvelles possibilités alignées avec qui vous êtes vraiment." },
+                { "icon": "🔄", "title": "Transitions de vie", "description": "Accompagnement lors des grandes étapes : reconversion, séparation, deuil, parentalité..." }
+            ]
+        },
+        {
+            "id": "enfants",
+            "section_label": "ENFANTS & Adolescents",
+            "section_title": "Un accompagnement adapté à chaque âge",
+            "section_intro": "J'accompagne également les enfants (dès 6 ans) et adolescents confrontés à diverses problématiques. Chaque séance se déroule en trois phases distinctes : un temps d'accueil avec les parents, un entretien avec l'enfant ou l'adolescent, puis un moment de débriefing avec les parents.",
+            "cards": [
+                { "icon": "😟", "title": "Peur, Anxiété, Timidité", "description": "Aider les enfants à gérer leurs émotions et à s'exprimer plus sereinement." },
+                { "icon": "😠", "title": "Colère, Stress, Nervosité", "description": "Apprendre à canaliser les émotions intenses et retrouver un équilibre intérieur." },
+                { "icon": "👻", "title": "Phobies, TOCs, Troubles du sommeil", "description": "Soutenir les enfants face aux peurs spécifiques, rituels répétitifs et difficultés nocturnes." },
+                { "icon": "💅", "title": "Habitudes émotionnelles", "description": "Accompagner pour surmonter des habitudes comme ronger les ongles ou sucer le pouce." }
+            ]
+        }
+    ]
+}

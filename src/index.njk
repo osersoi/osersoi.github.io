@@ -28,67 +28,25 @@ description: "{{ site.name }} - {{ site.description }}"
 </section>
 
 <!-- Section Accompagnement -->
-<section id="accompagnement" class="accompagnement">
+{% for genre in accompagnement.genres %}
+<section id="accompagnement{% if genre.id != 'adultes' %}-{{ genre.id }}{% endif %}" class="accompagnement">
     <div class="container">
-        <p class="section-label">Adultes</p>
-        <h2>{{ site.description }}</h2>
-        <p class="section-intro">J'accompagne les adultes dans leur quête de mieux-être, quelle que soit leur situation.</p>
+        <p class="section-label">{{ genre.section_label }}</p>
+        <h2>{{ genre.section_title }}</h2>
+        <p class="section-intro">{{ genre.section_intro }}</p>
 
         <div class="cards-grid">
+            {% for card in genre.cards %}
             <div class="card">
-                <div class="card-icon" aria-hidden="true">🌊</div>
-                <h3>Anxiété & Stress</h3>
-                <p>Retrouvez votre sérénité et apprenez à gérer vos émotions avec douceur. Transformez l'anxiété en confiance.</p>
+                <div class="card-icon" aria-hidden="true">{{ card.icon }}</div>
+                <h3>{{ card.title }}</h3>
+                <p>{{ card.description }}</p>
             </div>
-            <div class="card">
-                <div class="card-icon" aria-hidden="true">✨</div>
-                <h3>Confiance en soi</h3>
-                <p>Reconnectez-vous à vos forces et avancez avec assurance dans vos projets personnels et professionnels.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon" aria-hidden="true">🌱</div>
-                <h3>Habitudes & Comportements</h3>
-                <p>Transformez les schémas limitants en nouvelles possibilités alignées avec qui vous êtes vraiment.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon" aria-hidden="true">🔄</div>
-                <h3>Transitions de vie</h3>
-                <p>Accompagnement lors des grandes étapes : reconversion, séparation, deuil, parentalité...</p>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
-
-<section id="accompagnement-enfants" class="accompagnement">
-    <div class="container">
-        <p class="section-label">ENFANTS & Adolescents</p>
-        <h2>Un accompagnement adapté à chaque âge</h2>
-        <p class="section-intro">J'accompagne également les enfants (dès 6 ans) et adolescents confrontés à diverses problématiques. Chaque séance se déroule en trois phases distinctes : un temps d'accueil avec les parents, un entretien avec l'enfant ou l'adolescent, puis un moment de débriefing avec les parents.</p>
-
-        <div class="cards-grid">
-            <div class="card">
-                <div class="card-icon" aria-hidden="true">😟</div>
-                <h3>Peur, Anxiété, Timidité</h3>
-                <p>Aider les enfants à gérer leurs émotions et à s'exprimer plus sereinement.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon" aria-hidden="true">😠</div>
-                <h3>Colère, Stress, Nervosité</h3>
-                <p>Apprendre à canaliser les émotions intenses et retrouver un équilibre intérieur.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon" aria-hidden="true">👻</div>
-                <h3>Phobies, TOCs, Troubles du sommeil</h3>
-                <p>Soutenir les enfants face aux peurs spécifiques, rituels répétitifs et difficultés nocturnes.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon" aria-hidden="true">💅</div>
-                <h3>Habitudes émotionnelles</h3>
-                <p>Accompagner pour surmonter des habitudes comme ronger les ongles ou sucer le pouce.</p>
-            </div>
-        </div>
-    </div>
-</section>
+{% endfor %}
 
 <!-- Section À Propos -->
 <section id="a-propos" class="about">
@@ -102,32 +60,31 @@ description: "{{ site.name }} - {{ site.description }}"
                 </picture>
             </div>
             <div class="about-content">
-                <p class="section-label">À propos de moi</p>
-                <h2>Un parcours riche au service de votre transformation</h2>
+                <p class="section-label">{{ a_propos.section_label }}</p>
+                <h2>{{ site.therapist }}{{ a_propos.title_suffix }}</h2>
 
-                <p class="intro">Mon parcours n'a pas été linéaire. De laborantine médicale à volontaire en Asie et en Afrique avec Médecins Sans Frontières (MSF), de la coopération internationale au travail social, j'ai expérimenté de nombreuses transitions et remises en question tout au long de ma scolarité et de ma vie professionnelle.</p>
+                <p class="intro">{{ a_propos.intro }}</p>
 
-                <p>Longtemps, j'ai cherché à me comprendre afin de mieux vivre les aléas de la vie. Ce n’est que tardivement que j’ai réalisé à quel point mon fonctionnement est unique et cette prise de conscience m’a permis de m’accepter et de percevoir les différences qui me constituent comme des forces. Cette fine analyse ainsi que le grand intérêt que je porte à l’être humain ont nourri ma passion pour l’accompagnement au changement - parce que chaque chemin est unique.</p>
+                {% for paragraph in a_propos.content_paragraphs %}
+                <p>{{ paragraph | safe }}</p>
+                {% endfor %}
 
-                <p>Ma rencontre avec l'hypnose remonte à plus de <strong>20 ans</strong>. Elle m'a accompagnée dans des périodes critiques de ma vie (séparation, gestion des études et de la vie professionnelle), mes grossesses et accouchements. Je suis profondément convaincue de sa puissance.</p>
-
-                <p>Aujourd'hui, je mets cette compréhension intime des parcours non-linéaires au service de votre transformation. <strong>Parce que j'ai vécu le changement profond, je sais l'accompagner avec bienveillance et créativité.</strong>.</p>
-
-                <div class="certifications">
-                    <h3>Formations & Certifications</h3>
+                                <div class="certifications">
+                    <h3>{{ a_propos.certifications_title }}</h3>
                     <div class="certif-grid">
                         <ul>
-                            <li>Hypnose Ericksonienne (IHT, Denis Jaccard)</li>
-                            <li>Hypnose induction rapide (IHT, Bruno Laurent)</li>
-                            <li>Hypnose/PNL Enfant/Ado (PAM formation, Valérie Roumanoff)
-                            <li>PNL (NLP Society/Collège Romand de PNL)</li>
-                            <li>EFT (Emotional Freedom Techniques)</li>
+                            {% for certification in a_propos.certifications %}
+                            {% if loop.index <= (a_propos.certifications.length / 2) %}
+                            <li>{{ certification }}</li>
+                            {% endif %}
+                            {% endfor %}
                         </ul>
                         <ul>
-                            <li>Stimulation bilatérale (EMDR)</li>
-                            <li>Approche systémique</li>
-                            <li>Gestion de crises</li>
-                            <li>Formation d'adultes</li>
+                            {% for certification in a_propos.certifications %}
+                            {% if loop.index > (a_propos.certifications.length / 2) %}
+                            <li>{{ certification }}</li>
+                            {% endif %}
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
@@ -139,44 +96,37 @@ description: "{{ site.name }} - {{ site.description }}"
 <!-- Section Méthode -->
 <section id="methode" class="methode">
     <div class="container">
-        <p class="section-label">Approche</p>
-        <h2>Une méthode personnalisée qui s'adapte à vous</h2>
-        <p class="section-intro">L'hypnose Ericksonienne enrichie de PNL et d'autres outils pour une transformation profonde et durable.</p>
+        <p class="section-label">{{ methode.section_label }}</p>
+        <h2>{{ methode.title }}</h2>
+        <p class="section-intro">{{ methode.intro }}</p>
 
-        <div class="methode-grid">
+                <div class="methode-grid">
+            {% for item in methode.items %}
             <div class="methode-item">
-                <h3>Hypnose Ericksonienne</h3>
-                <p>Approche douce et respectueuse qui active vos ressources inconscientes. Loin du spectacle, cette pratique humaniste favorise un état de conscience modifié propice au changement souhaité.</p>
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
                 <ul>
-                    <li>Communication indirecte et permissive</li>
-                    <li>Respect de votre rythme unique</li>
-                    <li>Activation de vos propres solutions</li>
+                    {% for detail in item.details %}
+                    <li>{{ detail }}</li>
+                    {% endfor %}
                 </ul>
             </div>
-
+            {% if not loop.last %}
             <div class="methode-divider" aria-hidden="true">
                 <span>&</span>
             </div>
-
-            <div class="methode-item">
-                <h3>PNL & Outils complémentaires</h3>
-                <p>Techniques concrètes pour reprogrammer les schémas limitants et ancrer les changements souhaités dans votre quotidien.</p>
-                <ul>
-                    <li>Outils de changement rapide</li>
-                    <li>EFT & EMDR (stimulations bilatérales) selon besoins</li>
-                    <li>Techniques utilisables entre les séances</li>
-                </ul>
-            </div>
+            {% endif %}
+            {% endfor %}
         </div>
 
-        <div class="methode-result">
-            <h3>Le résultat</h3>
-            <p>Une transformation <strong>profonde ET rapide</strong>, généralement en <strong>3 à 6 séances</strong>, avec des outils concrets pour ancrer le changement dans votre vie quotidienne.</p>
+                <div class="methode-result">
+            <h3>{{ methode.result_title }}</h3>
+            <p>{{ methode.result_content | safe }}</p>
         </div>
     </div>
 </section>
 
-<!-- Section Tarifs (DYNAMIQUE depuis tarifs.json) -->
+<!-- Section Tarifs -->
 <section id="tarifs" class="tarifs">
     <div class="container">
         <p class="section-label">Tarifs & Modalités</p>

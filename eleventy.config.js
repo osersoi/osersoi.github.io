@@ -39,6 +39,13 @@ export default function(eleventyConfig) {
         });
     });
 
+    eleventyConfig.addCollection("sitemapPages", function(collectionApi) {
+        return collectionApi.getAll().filter((page) => {
+            // Only include pages with a URL ending in / or .html
+            return page.url && (page.url.endsWith("/") || page.url.endsWith(".html"));
+        });
+    });
+
     // Filtre pour formater les dates en français
     eleventyConfig.addFilter("dateFormat", function(date) {
         return new Date(date).toLocaleDateString("fr-CH", {
@@ -50,10 +57,10 @@ export default function(eleventyConfig) {
 
     // Filtre pour la date ISO 8601
     eleventyConfig.addFilter("isoDate", (date) => {
-      return new Date(date).toISOString().split('T')[0];
+        return new Date(date).toISOString().split('T')[0];
     });
 
-    
+
     // Filtre pour l'année courante
     eleventyConfig.addFilter("year", function() {
         return new Date().getFullYear();

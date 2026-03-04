@@ -29,7 +29,7 @@ description: "{{ site.name }} - {{ site.description }}"
 
 <!-- Section Accompagnement -->
 {% for genre in accompagnement.genres %}
-<section id="accompagnement-{{ genre.id }}" class="accompagnement">
+<section id="accompagnement{% if genre.id != 'adultes' %}-{{ genre.id }}{% endif %}" class="accompagnement">
     <div class="container">
         <p class="section-label">{{ genre.section_label }}</p>
         <h2>{{ genre.section_title }}</h2>

@@ -109,7 +109,7 @@ jobs:
       - name: Check internal links
         uses: untitaker/hyperlink@0.2.0
         with:
-          args: ./_site --sources src --check-anchors
+          args: ./_site --check-anchors
 
   accessibility:
     runs-on: ubuntu-latest

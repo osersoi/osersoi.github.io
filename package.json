@@ -15,7 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "pa11y-ci": "^4.0.1",
+    "pa11y-ci": "^4.1.0",
     "sass": "^1.97.3",
     "start-server-and-test": "^2.1.5",
     "stylelint": "^17.4.0",

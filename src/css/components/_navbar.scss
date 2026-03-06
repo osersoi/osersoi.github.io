@@ -25,7 +25,8 @@ body.nav-open {
 
 .logo {
   a {
-    display: block;
+    display: flex;
+    align-items: center;
     text-decoration: none;
 
     &:hover h1 {
@@ -41,6 +42,17 @@ body.nav-open {
     @include respond-to($bp-sm) {
       font-size: 1.3rem;
     }
+  }
+}
+
+.logo-favicon {
+  height: 3rem;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+
+  @include respond-to($bp-sm) {
+    height: 2.2rem;
   }
 }
 

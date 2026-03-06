@@ -2,7 +2,7 @@
 title: "Qu'est-ce que l'hypnose Ericksonienne ?"
 date: 2026-03-02
 description: "Découvrez cette approche douce et respectueuse qui vous aide à activer vos propres ressources intérieures."
-image: /images/blog/hypnose-ericksonienne.png
+image: /images/blog/hypnose-ericksonienne.webp
 ---
 
 L'hypnose Ericksonienne est une forme d'hypnose **douce et permissive**, développée par le psychiatre américain Milton H. Erickson.

@@ -3,7 +3,7 @@ local_backend: true
 backend:
   name: github
   repo: osersoi/osersoi.github.io
-  branch: main
+  branch: edit
 
 publish_mode: editorial_workflow
 

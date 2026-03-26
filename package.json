@@ -18,7 +18,7 @@
     "pa11y-ci": "^4.1.0",
     "sass": "^1.97.3",
     "start-server-and-test": "^2.1.5",
-    "stylelint": "^17.4.0",
+    "stylelint": "^17.6.0",
     "stylelint-config-standard-scss": "^17.0.0"
   }
 }

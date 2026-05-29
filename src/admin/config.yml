@@ -49,8 +49,8 @@ collections:
               - { name: badge,      label: Badge,         widget: string }
               - { name: title,      label: Titre,         widget: string }
               - { name: price,      label: Prix,          widget: string }
-              - { name: price_old,  label: Ancien prix,   widget: string }
-              - { name: promo,      label: Promo,         widget: string }
+              - { name: price_old,  label: Ancien prix,   widget: string, required: false }
+              - { name: promo,      label: Promo,         widget: string, required: false }
               - { name: duration,   label: Durée,         widget: string }
               - { name: featured,   label: Mis en avant,  widget: boolean }
               - name: details

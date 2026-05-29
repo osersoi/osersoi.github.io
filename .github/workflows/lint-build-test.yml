@@ -135,8 +135,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install Chromium
+        env:
+          PUPPETEER_CACHE_DIR: /home/runner/.cache/puppeteer
+        run: npx puppeteer browsers install chrome@145
+
       - name: Run accessibility tests
         env:
+          PUPPETEER_CACHE_DIR: /home/runner/.cache/puppeteer
           EMAIL: ${{ secrets.EMAIL }}
           WEB3FORMS_KEY: ${{ secrets.WEB3FORMS_KEY }}
           URL: ${{ secrets.URL }}

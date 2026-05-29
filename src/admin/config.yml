@@ -51,7 +51,7 @@ collections:
               - { name: price,      label: Prix,          widget: string }
               - { name: price_old,  label: Ancien prix,   widget: string, required: false }
               - { name: promo,      label: Promo,         widget: string, required: false }
-              - { name: duration,   label: Durée,         widget: string, required: false }
+              - { name: duration,   label: Durée,         widget: string }
               - { name: featured,   label: Mis en avant,  widget: boolean }
               - name: details
                 label: Détails

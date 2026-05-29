@@ -21,7 +21,7 @@
             "title": "Séance adulte",
             "price": "150.-",
             "price_old": null,
-            "promo": "120.- jusqu'au 31.05.2026",
+            "promo": null,
             "duration": "60 minutes",
             "featured": true,
             "details": [
@@ -36,7 +36,7 @@
             "title": "Séance enfant / ado",
             "price": "100.-",
             "price_old": null,
-            "promo": "60.- jusqu'au 31.05.2026",
+            "promo": null,
             "duration": "60 minutes",
             "featured": false,
             "details": [

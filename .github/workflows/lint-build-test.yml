@@ -135,6 +135,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install Chromium
+        run: npx puppeteer browsers install chrome
+
       - name: Run accessibility tests
         env:
           EMAIL: ${{ secrets.EMAIL }}
